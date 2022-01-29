@@ -42,7 +42,7 @@ router.post('/edit/:id', async (req,res) =>{
 
 // # PENDIENTE
 router.post('/delete/:id', async (req,res) =>{
-
+  let id = req.params.id
   await Post.remove({_id:id})
 
   res.redirect("/")
